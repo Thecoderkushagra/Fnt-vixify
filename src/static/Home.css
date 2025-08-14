@@ -1,0 +1,52 @@
+.main {
+    margin: 0px;
+    display: flex;
+}
+
+.common {
+    padding: 1rem;
+    height: 96vh;
+}
+
+.contacts {
+    background: rgba(196, 196, 196, 0.755);
+    max-width: 22rem;
+}
+
+.chat {
+    display: flex;
+    background: rgb(221, 221, 221);
+    max-width: 47rem;
+}
+
+.chat .sendbox{
+    background: rgba(74, 159, 220, 0.732);
+    position:absolute;
+    bottom: 0;
+    padding: 0;
+    width: 47rem;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.sendbox input {
+    background: rgb(221, 221, 221);
+    margin: 1rem;
+    width: 40rem;
+    height: 38px;
+    border: none;
+    border-radius: 7px;
+}
+
+.sendbox button{
+    background: rgb(221, 221, 221);
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+}
+
+.info {
+    background: rgba(196, 196, 196, 0.755);
+    max-width: 22rem;
+}
