@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginUser, signupUser } from '../path/BaseUrl';
+import { loginUser } from '../path/BaseUrl';
 
 export const useAuth = () => {
   const navigate = useNavigate();

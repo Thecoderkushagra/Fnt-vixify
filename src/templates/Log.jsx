@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSignup } from '../service/Signupservice';
 import { useAuth } from '../service/LogService';
 import logo from '../resources/logovexify.png';
 import '../static/Log.css';
@@ -11,6 +12,8 @@ const Log = () => {
   };
 
   const { loginData, handleLoginChange, handleLoginSubmit } = useAuth();
+  const { signupData, handleSignupChange, handleSignupSubmit } = useSignup();
+
 
   return (
 
@@ -19,8 +22,8 @@ const Log = () => {
         <h1><i>Vixify</i></h1>
         <span>
           <p>Distance dosen't matter here <br />
-          Connect to your loved onces with vixify...</p>
-          </span>
+            Connect to your loved onces with vixify...</p>
+        </span>
       </div>
 
       <div className="auth-container">
@@ -42,8 +45,6 @@ const Log = () => {
         <div className="image-container">
           <img src={logo} alt="logo" />
         </div>
-
-        {/* ============================================================================================= */}
 
         {activeTab === 'login' && (
           <div id="login-form" className="form-container">
@@ -76,23 +77,41 @@ const Log = () => {
           </div>
         )}
 
-        {/* =============================================================================================== */}
-
         {activeTab === 'register' && (
           <div id="register-form" className="form-container">
             <h2>Register</h2>
-            <form id="register">
+            <form id="register"
+              onSubmit={handleSignupSubmit}
+            >
               <div className="form-group">
                 <label htmlFor="register-username">Username</label>
-                <input type="text" id="register-username" required />
+                <input
+                  type="text"
+                  id="register-username"
+                  name="userName"
+                  value={signupData.userName}
+                  onChange={handleSignupChange}
+                  required />
               </div>
               <div className="form-group">
                 <label htmlFor="register-email">Email</label>
-                <input type="email" id="register-email" required />
+                <input
+                  type="email"
+                  id="register-email"
+                  name="email"
+                  value={signupData.email}
+                  onChange={handleSignupChange}
+                  required />
               </div>
               <div className="form-group">
                 <label htmlFor="register-password">Password</label>
-                <input type="password" id="register-password" required />
+                <input
+                  type="password"
+                  id="register-password"
+                  name="password"
+                  value={signupData.password}
+                  onChange={handleSignupChange}
+                  required />
               </div>
               <button type="submit">Register</button>
             </form>
