@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../path/BaseUrl';
+import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 export const useAuth = () => {
   const navigate = useNavigate();
@@ -26,15 +28,15 @@ export const useAuth = () => {
         if (token) {
           localStorage.setItem('jwtToken', token);
           console.log('Login successful! JWT:', token);
-          alert("Login successful!");
+          toast.success("Login Sucessfully");
           navigate('/home');
         } else {
-          alert("Login failed: No token received");
+          toast.error("Login failed: No token received");
         }
       })
       .catch((error) => {
         console.error('Login failed:', error.response || error.message);
-        alert("Login failed. Check credentials.");
+        toast.error("Login failed. Check credentials.");
       });
   };
 
