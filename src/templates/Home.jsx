@@ -1,20 +1,36 @@
 import '../static/Home.css';
 
-function Home(){
-    return(
-        <div className="main">
-            <div className="contacts common">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis velit similique minima labore voluptatem ducimus aspernatur debitis laboriosam ratione possimus amet quae voluptate modi cupiditate, sapiente optio dolores consequuntur repudiandae magnam aliquam ut eos placeat eum sed! Officiis sed distinctio, odit exercitationem nostrum fugit ipsum mollitia libero quibusdam pariatur vero, omnis velit culpa ea sequi quidem incidunt, quae laboriosam! Nisi porro, officiis eum totam enim, impedit veniam nam laboriosam, iure doloremque cumque error iusto non quis tempore aliquid possimus dicta assumenda labore? Cumque totam, iste perspiciatis velit aspernatur repellat quae! Voluptatum inventore nesciunt doloribus dolore ex voluptatem est, dignissimos quo impedit laboriosam quidem ad similique cum optio qui voluptates debitis eaque animi assumenda ut. Accusantium necessitatibus dolores est consectetur possimus dolorem perferendis reiciendis voluptatem officia ullam minima, unde animi qui soluta. Quibusdam, quas a suscipit, ad nulla assumenda est tenetur possimus pariatur harum tempora officiis enim ut sint? Error incidunt reiciendis at iste, nam tempora! Iusto, fugit ad doloremque repellendus dolores consequatur iure, commodi reiciendis illo at culpa earum. Reiciendis quaerat accusantium molestiae quibusdam ea hic. Ipsa at reiciendis adipisci voluptatibus repellat ipsam deserunt voluptatum autem corporis, illum natus veniam laborum, et, a iure iste dolorem nemo beatae excepturi obcaecati.
-            </div>
-            <div className="chat"><div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis velit similique minima labore voluptatem ducimus aspernatur debitis laboriosam ratione possimus amet quae voluptate modi cupiditate, sapiente optio dolores consequuntur repudiandae magnam aliquam ut eos placeat eum sed! Officiis sed distinctio, odit exercitationem nostrum fugit ipsum mollitia libero quibusdam pariatur vero, omnis velit culpa ea sequi quidem incidunt, quae laboriosam! Nisi porro, officiis eum totam enim, impedit veniam nam laboriosam, iure doloremque cumque error iusto non quis tempore aliquid possimus dicta assumenda labore? Cumque totam, iste perspiciatis velit aspernatur repellat quae! Voluptatum inventore nesciunt doloribus dolore ex voluptatem est, dignissimos quo impedit laboriosam quidem ad similique cum optio qui voluptates debitis eaque animi assumenda ut. Accusantium necessitatibus dolores est consectetur possimus dolorem perferendis reiciendis voluptatem officia ullam minima, unde animi qui soluta. Quibusdam, quas a suscipit, ad nulla assumenda est tenetur possimus pariatur harum tempora officiis enim ut sint? Error incidunt reiciendis at iste, nam tempora! Iusto, fugit ad doloremque repellendus dolores consequatur iure, commodi reiciendis illo at culpa earum. Reiciendis quaerat accusantium molestiae quibusdam ea hic. Ipsa at reiciendis adipisci voluptatibus repellat ipsam deserunt voluptatum autem corporis, illum natus veniam laborum, et, a iure iste dolorem nemo beatae excepturi obcaecati.</div>
+const Home =() =>{
+    return (
+        <div className='alpha'>
+            <div class="chat-container" id="chat-page">
+                <div class="users-list">
+                    <div class="users-list-container">
+                        <h2>Online Users</h2>
+                        <ul id="connectedUsers">
+                        </ul>
+                    </div>
+                    <div>
+                        <p id="connected-user-fullname"></p>
+                        {/* <a class="logout" href="javascript:void(0)" id="logout">Logout</a> */}
+                    </div>
+                </div>
 
-                <div className="sendbox">
-                    <input type="text" />
-                    <button>send</button>
+                <div class="chat-area">
+                    <div class="chat-area" id="chat-messages">
+                    </div>
+
+                    <form id="messageForm" name="messageForm" class="hidden">
+                        <div class="message-input">
+                            <input autocomplete="off" type="text" id="message" placeholder="Type your message..." />
+                            <button>Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div className="info common">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis velit similique minima labore voluptatem ducimus aspernatur debitis laboriosam ratione possimus amet quae voluptate modi cupiditate, sapiente optio dolores consequuntur repudiandae magnam aliquam ut eos placeat eum sed! Officiis sed distinctio, odit exercitationem nostrum fugit ipsum mollitia libero quibusdam pariatur vero, omnis velit culpa ea sequi quidem incidunt, quae laboriosam! Nisi porro, officiis eum totam enim, impedit veniam nam laboriosam, iure doloremque cumque error iusto non quis tempore aliquid possimus dicta assumenda labore? Cumque totam, iste perspiciatis velit aspernatur repellat quae! Voluptatum inventore nesciunt doloribus dolore ex voluptatem est, dignissimos quo impedit laboriosam quidem ad similique cum optio qui voluptates debitis eaque animi assumenda ut. Accusantium necessitatibus dolores est consectetur possimus dolorem perferendis reiciendis voluptatem officia ullam minima, unde animi qui soluta. Quibusdam, quas a suscipit, ad nulla assumenda est tenetur possimus pariatur harum tempora officiis enim ut sint? Error incidunt reiciendis at iste, nam tempora! Iusto, fugit ad doloremque repellendus dolores consequatur iure, commodi reiciendis illo at culpa earum. Reiciendis quaerat accusantium molestiae quibusdam ea hic. Ipsa at reiciendis adipisci voluptatibus repellat ipsam deserunt voluptatum autem corporis, illum natus veniam laborum, et, a iure iste dolorem nemo beatae excepturi obcaecati.</div>
-        </div>      
+        </div>
+
+
     )
 }
 export default Home;

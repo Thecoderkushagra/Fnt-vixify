@@ -27,7 +27,7 @@ export const useAuth = () => {
         const token = response.data.token;
         if (token) {
           localStorage.setItem('jwtToken', token);
-          console.log('Login successful! JWT:', token);
+          console.log('Login successful! JWT:', token);          
           toast.success("Login Sucessfully");
           navigate('/home');
         } else {
