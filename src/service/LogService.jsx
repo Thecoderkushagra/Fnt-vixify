@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../path/BaseUrl';
 import { toast } from 'react-toastify';
-// import { toast } from 'react-toastify';
+import { connect } from './chatService';
 
 export const useAuth = () => {
   const navigate = useNavigate();
@@ -27,9 +27,10 @@ export const useAuth = () => {
         const token = response.data.token;
         if (token) {
           localStorage.setItem('jwtToken', token);
-          console.log('Login successful! JWT:', token);          
+          localStorage.setItem('uzer', loginData.userName);       
           toast.success("Login Sucessfully");
           navigate('/home');
+          connect();
         } else {
           toast.error("Login failed: No token received");
         }
