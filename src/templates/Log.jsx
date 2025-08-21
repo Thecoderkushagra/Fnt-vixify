@@ -22,7 +22,7 @@ const Log = () => {
         <h1><i>Vixify</i></h1>
         <span>
           <p>Distance dosen't matter here <br />
-            Connect to your loved onces with vixify...</p>
+            Connect to your loved once with vixify...</p>
         </span>
       </div>
 
